@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Stations de Vélos - Montpellier</title>
+    <script>
+        async function loadStations() {
+            let response = await fetch('/stations');
+            let stations = await response.json();
+            let table = "<table border='1'><tr><th>Adresse</th><th>Vélos disponibles</th></tr>";
+
+            stations.forEach(station => {
+                table += `<tr><td>${station.adresse}</td><td>${station.places_disponibles}</td></tr>`;
+            });
+
+            table += "</table>";
+            document.getElementById("stations").innerHTML = table;
+        }
+        window.onload = loadStations;
+    </script>
+</head>
+<body>
+    <h1>Stations de Vélos Disponibles - Montpellier</h1>
+    <div id="stations">Chargement...</div>
+</body>
+</html>
