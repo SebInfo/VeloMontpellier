@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Stations de Vélos - Montpellier</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        #map { width: 80%; height: 600px; margin: auto; }
+    </style>
+</head>
+<body>
+    <h1>Stations de Vélos Disponibles - Montpellier</h1>
+    <div id="map">
+        {{ carte | safe }}  <!-- Intégration directe de la carte Folium -->
+    </div>
+</body>
+</html>
