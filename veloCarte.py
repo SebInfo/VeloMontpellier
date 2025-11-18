@@ -9,7 +9,6 @@ API_URL = "https://portail-api-data.montpellier3m.fr/bikestation"
 
 
 def generer_carte():
-    # 📡 Récupération des données
     response = requests.get(API_URL, headers={"Accept": "application/json"})
 
     if response.status_code == 200:
