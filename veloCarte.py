@@ -33,7 +33,7 @@ def generer_carte():
                 folium.Marker(
                     location=[latitude, longitude],
                     popup=popup_text,
-                    tooltip=nom_station,
+                    tooltip=adresse,
                     icon=folium.Icon(color=couleur, icon="bicycle", prefix="fa")
                 ).add_to(map_montpellier)
 
